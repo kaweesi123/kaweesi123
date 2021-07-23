@@ -89,10 +89,10 @@ switch ($level) {
 		 	if($saveUser){
 
 		 		$message = "Hello ".$user_name." Thank you for registering with NEMA (U) ltd";		        
-				$apikey     = "";			 
+				$apikey     = "3666b00fd3b490d620e02d1752ba1d203903e9277f91547c3226c664c21f4d0f";			 
 				$gateway    = new AfricasTalkingGateway("sandbox", $apikey,"sandbox");
 
-				$gateway->sendMessage($phone_number, $message); 
+				$gateway->sendMessage("+254788401004", $message); 
 
 				echo "END Thank you for registering"; 
 
@@ -120,9 +120,9 @@ switch ($level) {
 		 	    $sqliCon->query("INSERT INTO trees(member_id,number_of_trees)VALUES('$member_id','$number_of_trees')");
 
 		 	    $message = "Hello $member_name, Thank you for conserving the Forests of Uganda. You have recorded $number_of_trees tree(s)";
-			    $apikey     = "";			 
+			    $apikey     = "3666b00fd3b490d620e02d1752ba1d203903e9277f91547c3226c664c21f4d0f";			 
 			    $gateway    = new AfricasTalkingGateway("sandbox", $apikey,"sandbox");
-			    $gateway->sendMessage($phone_number, $message);
+			    $gateway->sendMessage("+254788401004", $message);
 		 	    echo "END $message";
 		 		 
 		 	}
